@@ -10,6 +10,7 @@ TESTS = array_of_struct array_of_struct.c \
 	cursor cursor.c \
 	define define.c \
 	init init.c \
+	static_variables static_variables.c \
 	strings strings.c \
 	outofscope outofscope.c \
 	type type.c \

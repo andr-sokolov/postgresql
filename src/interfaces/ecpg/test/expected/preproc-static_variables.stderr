@@ -1,0 +1,150 @@
+[NO_PID]: ECPGdebug: set to 1
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ECPGconnect: opening database ecpg1_regression on <DEFAULT> port <DEFAULT>  
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_execute on line 40: query: create table persons ( firstname varchar ( 50 ) not null , lastname varchar ( 50 ) not null , address varchar ( 255 ) not null , year_of_birth int not null , height_in_sm int not null , weight_in_kg int not null , data1 bytea not null , data2 bytea not null , data3 bytea not null ); with 0 parameter(s) on connection ecpg1_regression
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_execute on line 40: using PQexec
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_process_output on line 40: OK: CREATE TABLE
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_execute on line 64: query: insert into persons ( firstname , lastname , address , year_of_birth , height_in_sm , weight_in_kg , data1 , data2 , data3 ) values ( 'firstname1' , 'lastname1' , 'address1' , 1985 , 180 , 70 , $1  , $2  , $3  ); with 3 parameter(s) on connection ecpg1_regression
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_execute on line 64: using PQexecParams
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_free_params on line 64: parameter 1 = 0101010101
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_free_params on line 64: parameter 2 = 0202020202020202
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_free_params on line 64: parameter 3 = 030303030303030303030303
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_process_output on line 64: OK: INSERT 0 1
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_execute on line 73: query: insert into persons ( firstname , lastname , address , year_of_birth , height_in_sm , weight_in_kg , data1 , data2 , data3 ) values ( 'firstname2' , 'lastname2' , 'address2' , 1995 , 170 , 65 , $1  , $2  , $3  ); with 3 parameter(s) on connection ecpg1_regression
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_execute on line 73: using PQexecParams
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_free_params on line 73: parameter 1 = 0101010101
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_free_params on line 73: parameter 2 = 0202020202020202
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_free_params on line 73: parameter 3 = 030303030303030303030303
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_process_output on line 73: OK: INSERT 0 1
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_execute on line 82: query: insert into persons ( firstname , lastname , address , year_of_birth , height_in_sm , weight_in_kg , data1 , data2 , data3 ) values ( 'firstname3' , 'lastname3' , 'address3' , 2000 , 172 , 80 , $1  , $2  , $3  ); with 3 parameter(s) on connection ecpg1_regression
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_execute on line 82: using PQexecParams
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_free_params on line 82: parameter 1 = 0101010101
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_free_params on line 82: parameter 2 = 0202020202020202
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_free_params on line 82: parameter 3 = 030303030303030303030303
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_process_output on line 82: OK: INSERT 0 1
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ECPGtrans on line 91: action "commit"; connection "ecpg1_regression"
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_execute on line 93: query: declare cur cursor for select firstname , lastname , address , year_of_birth , height_in_sm , weight_in_kg , data1 , data2 , data3 from persons; with 0 parameter(s) on connection ecpg1_regression
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_execute on line 93: using PQexec
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_process_output on line 93: OK: DECLARE CURSOR
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_execute on line 99: query: fetch cur; with 0 parameter(s) on connection ecpg1_regression
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_execute on line 99: using PQexec
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_process_output on line 99: correctly got 1 tuples with 9 fields
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_get_data on line 99: RESULT: firstname1 offset: -1; array: no
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_get_data on line 99: RESULT: lastname1 offset: -1; array: no
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_get_data on line 99: RESULT: address1 offset: -1; array: no
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_get_data on line 99: RESULT: 1985 offset: -1; array: no
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_get_data on line 99: RESULT: 180 offset: -1; array: no
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_get_data on line 99: RESULT: 70 offset: -1; array: no
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_get_data on line 99: RESULT: \x0101010101 offset: -1; array: no
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_get_data on line 99: RESULT: \x0202020202020202 offset: -1; array: no
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_get_data on line 99: RESULT: \x030303030303030303030303 offset: -1; array: no
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_execute on line 99: query: fetch cur; with 0 parameter(s) on connection ecpg1_regression
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_execute on line 99: using PQexec
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_process_output on line 99: correctly got 1 tuples with 9 fields
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_get_data on line 99: RESULT: firstname2 offset: -1; array: no
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_get_data on line 99: RESULT: lastname2 offset: -1; array: no
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_get_data on line 99: RESULT: address2 offset: -1; array: no
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_get_data on line 99: RESULT: 1995 offset: -1; array: no
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_get_data on line 99: RESULT: 170 offset: -1; array: no
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_get_data on line 99: RESULT: 65 offset: -1; array: no
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_get_data on line 99: RESULT: \x0101010101 offset: -1; array: no
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_get_data on line 99: RESULT: \x0202020202020202 offset: -1; array: no
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_get_data on line 99: RESULT: \x030303030303030303030303 offset: -1; array: no
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_execute on line 99: query: fetch cur; with 0 parameter(s) on connection ecpg1_regression
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_execute on line 99: using PQexec
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_process_output on line 99: correctly got 1 tuples with 9 fields
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_get_data on line 99: RESULT: firstname3 offset: -1; array: no
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_get_data on line 99: RESULT: lastname3 offset: -1; array: no
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_get_data on line 99: RESULT: address3 offset: -1; array: no
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_get_data on line 99: RESULT: 2000 offset: -1; array: no
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_get_data on line 99: RESULT: 172 offset: -1; array: no
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_get_data on line 99: RESULT: 80 offset: -1; array: no
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_get_data on line 99: RESULT: \x0101010101 offset: -1; array: no
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_get_data on line 99: RESULT: \x0202020202020202 offset: -1; array: no
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_get_data on line 99: RESULT: \x030303030303030303030303 offset: -1; array: no
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_execute on line 99: query: fetch cur; with 0 parameter(s) on connection ecpg1_regression
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_execute on line 99: using PQexec
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_process_output on line 99: correctly got 0 tuples with 9 fields
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: raising sqlcode 100 on line 99: no data found on line 99
+[NO_PID]: sqlca: code: 100, state: 02000
+[NO_PID]: ecpg_execute on line 113: query: close cur; with 0 parameter(s) on connection ecpg1_regression
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_execute on line 113: using PQexec
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_process_output on line 113: OK: CLOSE CURSOR
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_execute on line 114: query: drop table persons; with 0 parameter(s) on connection ecpg1_regression
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_execute on line 114: using PQexec
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_process_output on line 114: OK: DROP TABLE
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ECPGtrans on line 115: action "commit"; connection "ecpg1_regression"
+[NO_PID]: sqlca: code: 0, state: 00000
+[NO_PID]: ecpg_finish: connection ecpg1_regression closed
+[NO_PID]: sqlca: code: 0, state: 00000

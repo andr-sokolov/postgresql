@@ -24,6 +24,7 @@ test: preproc/comment
 test: preproc/cursor
 test: preproc/define
 test: preproc/init
+test: preproc/static_variables
 test: preproc/strings
 test: preproc/type
 test: preproc/variable

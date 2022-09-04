@@ -14,6 +14,8 @@
 /outofscope.c
 /pointer_to_struct
 /pointer_to_struct.c
+/static_variables
+/static_variables.c
 /strings
 /strings.c
 /type
